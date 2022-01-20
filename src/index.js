@@ -11,7 +11,7 @@ app.use(cors())
 app.set('puerto', process.env.PORT || 3001)
 
 app.get('/', (req,res)=>{
-    res.send(<h1>Bien</h1>)
+    res.send("<h1>Bien</h1>")
 })
 
 //webSocketConfig
