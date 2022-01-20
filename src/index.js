@@ -1,14 +1,18 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
-const helmet = require('helmet')
+/* const helmet = require('helmet') */
 
 //middleware
 app.use(cors())
-app.use(helmet());
+//app.use(helmet());
 
 //config
 app.set('puerto', process.env.PORT || 3001)
+
+app.get('/', (req,res)=>{
+    res.send(<h1>Bien</h1>)
+})
 
 //webSocketConfig
 const { createServer } = require('http')
